@@ -3,23 +3,23 @@ import java.util.Random;
 
 public class GuessingGame {
     public static void main(String[] args) {
-        // 1. Initialize tools
+        
         Scanner scanner = new Scanner(System.in);
         Random random = new Random();
         
-        // 2. Set up game variables
-        int numberToGuess = random.nextInt(100) + 1; // Generates 1 to 100
+ 
+        int numberToGuess = random.nextInt(100) + 1; 
         int numberOfTries = 0;
         boolean hasGuessedCorrectly = false;
         
         System.out.println("Welcome to the Number Guessing Game!");
         System.out.println("I'm thinking of a number between 1 and 100.");
 
-        // 3. The Game Loop
+   
         while (!hasGuessedCorrectly) {
             System.out.print("Enter your guess: ");
             
-            // Check if input is actually a number to prevent crashing
+            
             if (scanner.hasNextInt()) {
                 int userGuess = scanner.nextInt();
                 numberOfTries++;
@@ -36,7 +36,7 @@ public class GuessingGame {
                 }
             } else {
                 System.out.println("That's not a valid number. Try again.");
-                scanner.next(); // Clear the invalid input
+                scanner.next(); 
             }
         }
 
